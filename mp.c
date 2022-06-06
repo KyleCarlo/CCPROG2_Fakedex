@@ -374,11 +374,12 @@ void main()
         fprintf(fp, "%s", ""); //gender
         fprintf(fp, "%s", ""); //caught
     }
+    printf("--------- DEX END ---------");
     for(i = 0; i < /*nummber of fakemons in box*/; i++){
         fprintf(fp, "%d", entry[i].slot); //slot  --entry[i].slot is just an example
         fprintf(fp, "%s", entry[i].name); //name  --entry[i].name is just an example
         fprintf(fp, "%s", ""); //short name
     }
-
+    printf("--------- BOX END ---------");
     fclose(fp);
 }
