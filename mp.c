@@ -294,7 +294,6 @@ void addEntry (Entry fakemon)
     printf("%c %.25s... %c\n", D_VERLINE, descsamp, D_VERLINE);
     UI("lower double border", 32);
     colorChange(RESET, RESET);
-    printf("%d", strlen(descsamp));
 }
 
 void main()
