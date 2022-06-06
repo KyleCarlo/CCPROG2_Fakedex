@@ -291,7 +291,7 @@ void addEntry (Entry fakemon)
     printf("%c [NICKNAME]: %s            %c\n", D_VERLINE, nickname, D_VERLINE);
     UI("mid hollow double", 32); printf("\n");
     printf("%c         [DESCRIPTION]        %c\n", D_VERLINE, D_VERLINE);
-    printf("%c %.28s %c\n", D_VERLINE, descsamp, D_VERLINE);
+    printf("%c %.25s... %c\n", D_VERLINE, descsamp, D_VERLINE);
     UI("lower double border", 32);
     colorChange(RESET, RESET);
     printf("%d", strlen(descsamp));
