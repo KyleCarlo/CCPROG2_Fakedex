@@ -276,21 +276,22 @@ int printFDMenu()
 void addEntry (Entry fakemon)
 {
     int nChoice = 0, i, nReturn = 0;
-    char *descsamp = "abcdefghjiklmnopqrstuvwxyz";
-    
+    char *descsamp = "abcdefghjiklmnopqrstuvwxyzdasdasda";
+    char name[12] = "fried rice";
+    char nickname[6] = "BALLZ";
     colorChange(WHITE, BLUE);
     UI("upper double border", 32);
     printf("\n%c           ADD ENTRY          %c\n", D_VERLINE, D_VERLINE);
     UI("mid dsd border", 32); 
-    printf("\n%c [NAME]: 123456789012         %c\n", D_VERLINE, D_VERLINE);
-    printf("%c [NICKNAME]: 12345            %c\n", D_VERLINE, D_VERLINE);
+    printf("\n%c [NAME]: %s", D_VERLINE, name);
+    for(i = 0; i < (21 - strlen(name)); i++){
+        printf(" ");
+    }
+    printf("%c\n", D_VERLINE);
+    printf("%c [NICKNAME]: %s            %c\n", D_VERLINE, nickname, D_VERLINE);
     UI("mid hollow double", 32); printf("\n");
     printf("%c         [DESCRIPTION]        %c\n", D_VERLINE, D_VERLINE);
-    for (i = 0; i < strlen(descsamp) / 28 + 1; i++)
-    {
-        printf("%c %.28s %c\n", D_VERLINE, descsamp + 28 * i, D_VERLINE);
-    }
-    
+    printf("%c %.28s %c\n", D_VERLINE, descsamp, D_VERLINE);
     UI("lower double border", 32);
     colorChange(RESET, RESET);
     printf("%d", strlen(descsamp));
@@ -365,8 +366,9 @@ void main()
         break;
     }
 
+    /*
     int i;
-    for(i = 0; i < /*nummber of fakemons in fakedex*/; i++){
+    for(i = 0; i < *nummber of fakemons in fakedex*; i++){
         fprintf(fp, "%d", entry[i].slot); //slot  --entry[i].slot is just an example
         fprintf(fp, "%s", entry[i].name); //name  --entry[i].name is just an example
         fprintf(fp, "%s", ""); //short name
@@ -375,11 +377,12 @@ void main()
         fprintf(fp, "%s", ""); //caught
     }
     printf("--------- DEX END ---------");
-    for(i = 0; i < /*nummber of fakemons in box*/; i++){
+    for(i = 0; i < *nummber of fakemons in box*; i++){
         fprintf(fp, "%d", entry[i].slot); //slot  --entry[i].slot is just an example
         fprintf(fp, "%s", entry[i].name); //name  --entry[i].name is just an example
         fprintf(fp, "%s", ""); //short name
     }
     printf("--------- BOX END ---------");
     fclose(fp);
+    */
 }
